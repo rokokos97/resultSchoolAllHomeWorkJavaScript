@@ -6,22 +6,22 @@ for (let i = 0; i < 3; i += 1) {
   }
 }
 
-let i = 0;
+let j = 0;
 do {
   let newStudent = prompt("Введите имя нового студента!");
   if (newStudent) {
     newStudent = newStudent.trim();
     alert(`Добро пожаловать, ${newStudent}!`);
   }
-  i += 1;
-} while (i < 3);
+  j += 1;
+} while (j < 3);
 
-let i = 0;
-while (i <= 2) {
+let t = 0;
+while (t <= 2) {
   let newStudent = prompt("Введите имя нового студента!");
   if (newStudent) {
     newStudent = newStudent.trim();
     alert(`Добро пожаловать, ${newStudent}!`);
   }
-  i += 1;
+  t += 1;
 }

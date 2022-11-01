@@ -1,8 +1,19 @@
-const matrix = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
+const ordersArr = [4, 2, 1, 3];
+const people = [
+  { id: 1, name: "Максим" },
+  { id: 2, name: "Николай" },
+  { id: 3, name: "Ангелина" },
+  { id: 4, name: "Виталий" },
 ];
-let newArr = [];
-matrix.forEach((item) => newArr.push(...item));
-console.log(newArr);
+giveTalonsInOrder = (patients, orders) => {
+  let talonsArr = [];
+  orders.forEach((order) => {
+    patients.forEach((patient) => {
+      if (order === patient.id) {
+        talonsArr.push(patient);
+      }
+    });
+  });
+  return talonsArr;
+};
+console.log(giveTalonsInOrder(people, ordersArr));

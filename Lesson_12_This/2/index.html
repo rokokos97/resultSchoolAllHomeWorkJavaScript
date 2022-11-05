@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Lesson 12 This</title>
+</head>
+<body>
+<header class="header">
+  <h1 >
+    Lesson 12 This Exercise 1
+  </h1>
+  <h2 class="tack_conditions">
+    У вас есть 2 объекта dog и bird, в которых содержится их описание.
+    Вам необходимо создать функцию makeDomestic(), которая будет работать с ключевым словом this таким образом.
+
+    Она должна выводить в консоль всю информацию о животном в сообщении: “type по имени name говорит sound”, где name - имя животного, type - его тип, sound - результат вызова функции makeSound().
+
+    Также функция makeDomestic() должна принимать параметр isDomestic. Он является типом данных boolean и показывает, домашнее ли животное или нет (true/false).
+
+    Функция makeDomestic() должна возвращать новый объект животного, в котором будут все прошлые параметры (name, type, makeSound()), а также будет добавлен новый параметр isDomestic.
+
+    Кроме этого для обращения к свойствам животного функция makeDomestic() должна использовать только this. Т.е. вам разрешено обращаться к свойствам только через this.name либо this.makeSound(), но никак не bird.name либоbird.makeSound().
+
+    Вызовите функцию makeDomestic() 3 раза используя методы bind(), call(), apply(). При использовании bind(), функцияmakeDomestic() должна работать с объектом dog, при apply() и call() - с объектом bird. Не забывайте передавать параметр isDomestic в функцию при ее вызове.
+  </h2>
+</header>
+<script src="index.js"></script>
+</body>
+</html>

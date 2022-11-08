@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Lesson 13 Classes & OOP</title>
+</head>
+<body>
+<header class="header">
+  <h1 >
+    Lesson 13 Classes & OOP Exercise 5
+  </h1>
+  <h2 class="tack_conditions">
+    Ваша компания создает внутренний продукт для облегчения контроля за ростом своих разработчиков. Вам поручили задачу реализовать такой продукт.
+
+    Для начала вам необходимо создать класс Developer, конструктор которого будет принимать 3 параметра:
+
+    fullName - имя разработчика.
+    age - возраст разработчика.
+    position- текущая позиция разработчика в компании (например, Junior, Middle, Senior).
+    Инициализируйте все параметры при помощи this. Также создайте внутри конструктора поле technologies, которое по умолчанию будет равно пустому массиву.
+
+    Кроме этого в классе Developer вам необходимо создать 2 метода:
+
+    code - метод, у которого тело изначально пустое (в фигурных скобках ничего нет).
+    learnNewTechnologies() - данный метод принимает в себя 1 параметр technology, который должен добавляться в конец массива technologies.
+    После проделанных действий у вас должен получиться шаблон Developer, благодаря которому вы будете создавать дочерние классы.
+
+    Вам сейчас необходимо создать 3 дочерних класса от класса Developer:
+
+    JuniorDeveloper. Конструктор данного класса принимает 2 параметра: fullName и age. Вызовите конструктор родительского класса и передайте туда эти 2 параметра. В качестве 3-го у нас выступает position. Вам необходимо его указать по умолчанию. Напишите значение "Junior" в качестве 3-го параметра вызова родительского конструктора. Кроме этого, переопределить метод code(), чтобы он выводил в консоль строку: “Junior разработчик пишет код...”. Массив technologies должен содержать следующие технологии: 'HTML', 'CSS', 'JavaScript'.
+    MiddleDeveloper. Проделайте ту же самую работу в конструкторе, что и в JuniorDeveloper. Только на место position передавайте значение "Middle". Метод code() у класса MiddleDeveloper должен выводить в консоль строку: “Middle разработчик пишет код...”. Массив technologies должен содержать следующие технологии: 'HTML', 'CSS', 'JavaScript', ‘React’.
+    SeniorDeveloper. Проделайте ту же самую работу в конструкторе, что и в JuniorDeveloper. Только на место position передавайте значение "Senior". Метод code() у класса SeniorDeveloper должен выводить в консоль строку: “Senior разработчик пишет код...”. Массив technologies должен содержать следующие технологии: 'HTML', 'CSS', 'JavaScript', ‘React’, ‘NodeJS’.
+    Примечание: когда вы переопределите метод code() в дочерних классах, то вы используете принцип Полиморфизм.
+
+    Тестируйте написанные классы с помощью этого кода:
+  </h2>
+  <h3 style="text-align: left; color:red">
+    const juniorDeveloper = new JuniorDeveloper("Анастасия", 20);<br>
+    const middleDeveloper = new MiddleDeveloper("Игорь", 25);<br>
+    const seniorDeveloper = new SeniorDeveloper("Максим", 30);<br>
+    <br>
+    juniorDeveloper.code(); // Junior разработчик пишет код...<br>
+    middleDeveloper.code(); // Middle разработчик пишет код...<br>
+    seniorDeveloper.code(); // Senior разработчик пишет код...<br>
+    <br>
+    seniorDeveloper.learnNewTechnologies("Docker");<br>
+    <br>
+    console.log(<br>
+    juniorDeveloper.fullName,<br>
+    juniorDeveloper.age,<br>
+    juniorDeveloper.position,<br>
+    juniorDeveloper.technologies<br>
+    );<br>
+    // 'Анастасия' 20 'Junior' ['HTML', 'CSS', 'JavaScript']<br>
+    <br>
+    console.log(<br>
+    middleDeveloper.fullName,<br>
+    middleDeveloper.age,<br>
+    middleDeveloper.position,<br>
+    middleDeveloper.technologies<br>
+    );<br>
+    // 'Игорь' 25 'Middle' ['HTML', 'CSS', 'JavaScript', 'React']<br>
+    <br>
+    console.log(<br>
+    seniorDeveloper.fullName,<br>
+    seniorDeveloper.age,<br>
+    seniorDeveloper.position,<br>
+    seniorDeveloper.technologies<br>
+    );<br>
+    // 'Максим' 30 'Senior' ['HTML', 'CSS', 'JavaScript', 'React', 'NodeJS', 'Docker']<br>
+  </h3>
+</header>
+<script src="index.js"></script>
+</body>
+</html>

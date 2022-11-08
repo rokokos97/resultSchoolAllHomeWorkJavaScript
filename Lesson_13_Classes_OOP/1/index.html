@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Lesson 13 Classes & OOP</title>
+</head>
+<body>
+<header class="header">
+  <h1 >
+    Lesson 13 Classes & OOP Exercise 1
+  </h1>
+  <h2 class="tack_conditions">
+    Вам дана функция-конструктор, с помощью которой можно создавать экземпляры объектов.
+    Ваша задача состоит в том, чтобы переписать данную функцию на класс (class).
+  </h2>
+  <h3 style="text-align: left; color:red">
+    function Student(name, age) <br>
+    this.name = name;<br>
+    this.age = age;<br>
+    this.technologies = [];<br>
+    this.status = "Junior";<br>
+    this.setTechnologies = function (technologies) {<br>
+    this.technologies = [...this.technologies, ...technologies];<br>
+    };<br>
+    this.setNewStatus = function (newStatus) {<br>
+    this.status = newStatus;<br>
+    };<br>
+    }<br>
+    const student = new Student("Maxim", 20);<br>
+    student.setTechnologies(["HTML", "CSS", "JavaScript"]);<br>
+    student.setNewStatus("Middle");<br>
+    console.log(student);<br>
+
+  </h3>
+</header>
+<script src="index.js"></script>
+</body>
+</html>

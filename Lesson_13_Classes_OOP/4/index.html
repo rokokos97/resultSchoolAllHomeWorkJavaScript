@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Lesson 13 Classes & OOP</title>
+</head>
+<body>
+<header class="header">
+  <h1 >
+    Lesson 13 Classes & OOP Exercise 4
+  </h1>
+  <h2 class="tack_conditions">
+    В прошлом задании вы создали словарь. Заказчик доволен проделанной работой и команда разработки тоже. Так как вы уже хорошо разобрались с технологией словаря, то вас попросили реализовать еще один словарь. Заказчик хочет создать новую категорию слов “Сложные слова”.
+
+    Используйте код, написанный в прошлом задании. Вам необходимо создать дочерний класс HardWordsDictionary от класса Dictionary. Конструктор у HardWordsDictionary принимает в себя также параметр name и вызывает конструктор родительского класса.
+
+    Примечание: если конструктор только вызывает родительский конструктор со всеми переданными параметрами, то в дочернем классе его можно не реализовывать, автоматически будет вызываться родительский (ссылка на документацию)
+
+    Все методы, которые есть в Dictionary, должны остаться без изменений в HardWordsDictionary, кроме одного. Вам необходимо переопределить метод add(), который должен работать по той же логике, что и add() у Dictionary, только объект слова должен выглядеть следующим образом:
+  </h2>
+  <h3 style="text-align: left; color:red">
+    {<br>
+    word: 'word',<br>
+    description: 'description',<br>
+    isDifficult: true,<br>
+    }<br>
+  </h3>
+  <h2>
+    Для теста класса HardWordsDictionary используйте данный код:
+  </h2>
+  <h3 style="text-align: left; color:red">
+    const hardWordsDictionary = new HardWordsDictionary("Сложные слова");<br>
+    <br>
+    hardWordsDictionary.add(<br>
+    "дилетант",<br>
+    "Тот, кто занимается наукой или искусством без специальной подготовки, обладая только поверхностными знаниями."<br>
+    );<br>
+    <br>
+    hardWordsDictionary.add(<br>
+    "неологизм",<br>
+    "Новое слово или выражение, а также новое значение старого слова."<br>
+    );<br>
+    <br>
+    hardWordsDictionary.add(<br>
+    "квант",<br>
+    "Неделимая часть какой-либо величины в физике."<br>
+    );<br>
+    <br>
+    hardWordsDictionary.remove("неологизм");<br>
+    <br>
+    hardWordsDictionary.showAllWords();<br>
+    <br>
+    // дилетант - Тот, кто занимается наукой или искусством без специальной подготовки, обладая только поверхностными знаниями.<br>
+    // квант - Неделимая часть какой-либо величины в физике.<br>
+  </h3>
+</header>
+<script src="index.js"></script>
+</body>
+</html>

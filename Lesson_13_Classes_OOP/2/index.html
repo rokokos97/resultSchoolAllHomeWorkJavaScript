@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Lesson 13 Classes & OOP</title>
+</head>
+<body>
+<header class="header">
+  <h1 >
+    Lesson 13 Classes & OOP Exercise 1
+  </h1>
+  <h2 class="tack_conditions">
+    Вам необходимо создать класс Person, от него мы сможем создавать экземпляры людей. Конструктор класса будет принимать 2 параметра:
+
+    name - имя человека
+    age - количество полных лет
+    Также вам необходимо реализовать метод compareAge(). Он принимает в себя экземпляр класса Person и сравнивает значения полных лет.
+
+    Данный метод должен возвращать результат в следующем формате: Если у одного Person количество лет больше либо равно, чем у другого, то выводите сообщение через alert() : “name1 старше, чем name2”. Иначе же: “name1 младше, чем name2”.
+
+    Запускайте данный код для теста работы вашего класса Person.
+  </h2>
+  <h3 style="text-align: left; color:red">
+    const person1 = new Person("Максим", 24);<br>
+    const person2 = new Person("Светлана", 36);<br>
+    const person3 = new Person("Ирина", 23);<br>
+    <br>
+    person1.compareAge(person2); // Максим младше, чем Светлана<br>
+    person2.compareAge(person3); // Светлана старше, чем Ирина<br>
+    person3.compareAge(person1); // Ирина младше, чем Максим<br>
+
+  </h3>
+</header>
+<script src="index.js"></script>
+</body>
+</html>

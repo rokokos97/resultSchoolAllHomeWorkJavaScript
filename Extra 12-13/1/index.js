@@ -23,16 +23,33 @@ const attacker = {
     return [attackChance, maxChance];
   },
   improveArmy() {
-    Object.values(this).map((item) => {
-      if (typeof item === "number") {
-        item += 5;
+    Object.entries(this).forEach((item) => {
+      let key = item[0];
+      let value = item[1];
+      if (typeof value === "number") {
+        this[key] = value + 5;
       }
-      return item;
+      return this;
     });
   },
+  attack(defenderObject) {
+    let chance = this.checkChancesToWin(defenderObject);
+    console.log(chance);
+    const chanceValue = chance[0] / chance[1];
+    console.log(chanceValue);
+    if (chanceValue > 0.7) {
+      alert("Мы усилились! Мы несомненно победим! Наши шансы высоки!");
+    } else {
+      alert(
+        `Наши шансы равны ${this.checkChancesToWin(defenderObject)[0]}/${
+          this.checkChancesToWin(defenderObject)[1]
+        }. Необходимо укрепление!`
+      );
+      this.improveArmy();
+    }
+  },
 };
-attacker.improveArmy();
-console.log(attacker.checkChancesToWin(defender));
-// attacker.attack(defender);
-// attacker.attack(defender);
-// attacker.attack(defender);
+
+attacker.attack(defender);
+attacker.attack(defender);
+attacker.attack(defender);
